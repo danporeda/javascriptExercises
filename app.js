@@ -195,11 +195,11 @@
 // }
 
 // setTimeout(function () {
-//     alert("WELCOME CUNT!");
+//     alert("WELCOME!");
 // }, 2000);
 
 // const btn = document.querySelector('button');
 // btn.addEventListener('click', function(){
-//     alert("Why did you click my cunt?!")
+//     alert("Why did you click me?!")
 // });
 
