@@ -203,3 +203,133 @@
 //     alert("Why did you click me?!")
 // });
 
+// const nums = [9,8,7,6,5,4,3,2,1];
+// const words = ['asap', 'byob', 'rofl', 'rsvp'];
+
+// const parityList = nums.map((n) => 
+//     n % 2 === 0 ? 'even' : 'odd'
+// )
+
+// console.log(parityList);
+
+// const doubles1 = nums.map(function (n) {
+//     return n * 2;
+// })
+
+// const doubles2 = nums.map(n => {
+//     return n * 2;
+// })
+
+// const doubles3 = nums.map(n => n * 2);
+
+// console.log(doubles3);
+
+// nums.forEach(function(num, id){
+//     console.log(id, num);
+// });
+
+// const isEven = nums.map(function(n) {
+//     return {
+//         value: n,
+//         even : n % 2 === 0
+//     }
+// })
+
+// const upperWords = words.map(function (word) {
+//     return word.toUpperCase().split('').join('.');
+// })
+
+// console.log(upperWords);
+
+// function printTriple(n){
+//     console.log(n * 3);
+// }
+
+const books = [{
+    title : 'Good Omens',
+    authors : ['Terry Pratchett', 'NEil Gaiman'],
+    rating : 4.25
+},
+{
+    title : 'Bone: The complete edition',
+    authors : ['Jeff Smith'],
+    rating : 4.2
+},
+{
+    title : 'American Goons',
+    authors : ['Neil Gaiman'],
+    rating : 4.11
+},
+{
+    title : 'A Gentleman in Moscow',
+    authors : ['Amor Towles'],
+    rating : 4.36
+}
+]
+
+books.sort((a,b) => a.rating - b.rating);
+console.log(books);
+
+// let query = 'A';
+// const bookSearch = books.filter((book) => {
+//     let title = book.title.toLowerCase();
+//     return title.includes(query.toLowerCase());
+// })
+
+// console.log(bookSearch);
+// const goodBook = books.find(book => book.rating > 4.19);
+
+// console.log(goodBook);
+
+// const onlyBooks = books.map(book => book.title.toUpperCase());
+
+// console.log(onlyBooks);
+
+// books.forEach(book => console.log(book.title.toUpperCase()));
+
+
+// const square = n => n * n;
+// console.log(square(5));
+
+const movies = [
+    'Mrs. Doubtfire',
+    'Mr. and Mrs. Smith',
+    'The Fantastic Mr. Fox',
+    'Mr. Deeds'
+]
+
+// const movie = movies.find(movie => movie.includes('Mrs'));
+
+// console.log(movie)
+
+// const mrsMovie = movies.filter(movie => movie.includes('Mrs'));
+// const mrMovie = movies.filter(movie => movie.includes('Mr'));
+
+// console.log(mrMovie);
+
+const words = ['dog', 'lag', 'bag', 'fag', 'digf', 'log'];
+
+const all3Lets = words.every(word => word.length === 3);
+
+const allEndInG = words.every(word => {
+    const lastL = word.length - 1;
+    return word[lastL] === 'g';
+});
+
+const startsD = words.some(word => word[0] === 'd');
+
+// console.log(startsD);
+
+const prices = [400.5, 30000, 99.99, 35.99, 12, 9500];
+
+// const sortedPrices = prices.sort();
+// console.log('prices',prices);
+// const ascSort = prices.slice().sort((a,b) => a - b);
+// console.log('ascSort', ascSort);
+// const descSort = prices.slice().sort((a,b) => b - a);
+// console.log('descSort',descSort);
+// // prices.sort((a,b) => a - b);
+// console.log('ascSort again', ascSort);
+// // prices.sort((a,b) => b - a);
+// console.log('prices again',prices);
+// console.log('descSort again', descSort);
