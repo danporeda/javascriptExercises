@@ -272,12 +272,12 @@ const books = [{
 }
 ]
 
-const cuntLog = books.reduce((groupedBooks, book) => {
-    const key = Math.floor(book.rating);
-    if (!groupedBooks[key]) groupedBooks[key] = [];
-    groupedBooks[key].push(book)
-    return groupedBooks;
-}, {})
+// const cuntLog = books.reduce((groupedBooks, book) => {
+//     const key = Math.floor(book.rating);
+//     if (!groupedBooks[key]) groupedBooks[key] = [];
+//     groupedBooks[key].push(book)
+//     return groupedBooks;
+// }, {})
 // console.log(cuntLog);
 // books.sort((a,b) => a.rating - b.rating);
 // console.log(books);
@@ -384,5 +384,21 @@ const results = votes.reduce((tally, val) => {
 }, {})
 // console.log(results);
 
-const greeting = (person, greeting = 'hi') => greeting + ' ' + person + "!";
-console.log(greeting('cunt', 'yo'));
+// const greeting = (person, greeting = 'hi') => greeting + ' ' + person + "!";
+// console.log(greeting('cunt', 'yo'));
+
+const nums = [9,3,2,8];
+// console.log(Math.max(...nums));
+
+function giveMeFour(a,b,c,d) {
+    console.log('a', a);
+    console.log('b', b);
+    console.log('c', c);
+    console.log('d', d);
+}
+
+const colors = ['red', 'blue', 'green', 'yellow', 'turqouise'];
+
+const str = 'GOAT';
+
+console.log(giveMeFour(...str));
