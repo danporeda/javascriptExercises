@@ -401,4 +401,13 @@ const colors = ['red', 'blue', 'green', 'yellow', 'turqouise'];
 
 const str = 'GOAT';
 
-console.log(giveMeFour(...str));
+const cephalopods = ['dumbo octopus', 'humboldt squid', 'flamboyant cuttlefish'];
+
+const gastropods = ['giant african snail','banana slug', 'variable neon slug'];
+
+const cnidaria = ['fire coral', 'moon jelly'];
+
+const mollusca = [...cephalopods, ...gastropods];
+console.log(mollusca);
+
+// console.log(giveMeFour(...str));
