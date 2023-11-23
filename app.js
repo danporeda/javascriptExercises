@@ -264,11 +264,23 @@ const books = [{
     title : 'A Gentleman in Moscow',
     authors : ['Amor Towles'],
     rating : 4.36
+},
+{
+    title : "Shitty Cunt of a Book",
+    authors: ['Hatem Bazien'],
+    rating: 0.01
 }
 ]
 
-books.sort((a,b) => a.rating - b.rating);
-console.log(books);
+const cuntLog = books.reduce((groupedBooks, book) => {
+    const key = Math.floor(book.rating);
+    if (!groupedBooks[key]) groupedBooks[key] = [];
+    groupedBooks[key].push(book)
+    return groupedBooks;
+}, {})
+// console.log(cuntLog);
+// books.sort((a,b) => a.rating - b.rating);
+// console.log(books);
 
 // let query = 'A';
 // const bookSearch = books.filter((book) => {
@@ -333,3 +345,44 @@ const prices = [400.5, 30000, 99.99, 35.99, 12, 9500];
 // // prices.sort((a,b) => b - a);
 // console.log('prices again',prices);
 // console.log('descSort again', descSort);
+
+
+// REDUCE!!!
+
+// const nums = [3,4,5,6,7];
+// const mean = nums.reduce((accumulator, currentVal) => {
+//     console.log(accumulator, currentVal)
+//     return (accumulator + currentVal) / nums.length});
+// console.log(mean);
+
+const grades = [87,64,96,92,88,99,73,70,64];
+
+const maxGrade = grades.reduce((max,currVal) => {
+    if (currVal > max) return currVal;
+    return max;
+})
+const minGrade = grades.reduce((min, currVal) => {
+    return Math.min(min, currVal);
+})
+// console.log(minGrade);
+
+const sum = [10,20,30,40,50].reduce((sum, currVal) => {
+    return sum + currVal;
+}, 1000)
+// console.log(sum);
+
+const votes = ['y','n','y','y','y','n','y','n','n','y','n','n','y','y','n','n'];
+const results = votes.reduce((tally, val) => {
+//     if (tally[val]) {
+//         tally[val]++;
+//     } else {
+//         tally[val] = 1;
+//     }
+//     return tally;
+    tally[val] = (tally[val] || 0) +1;
+    return tally;
+}, {})
+// console.log(results);
+
+const greeting = (person, greeting = 'hi') => greeting + ' ' + person + "!";
+console.log(greeting('cunt', 'yo'));
