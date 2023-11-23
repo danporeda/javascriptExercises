@@ -407,7 +407,16 @@ const gastropods = ['giant african snail','banana slug', 'variable neon slug'];
 
 const cnidaria = ['fire coral', 'moon jelly'];
 
-const mollusca = [...cephalopods, ...gastropods];
-console.log(mollusca);
+const feline = { legs : 4, family : "Felidae"};
+const canine = { family : 'Canine', furry : true};
+const dog = { ...canine, isPet : true, adorable : true};
+const houseCat = {...feline, isGrumpy : true, personality : 'unpredictable'};
+const catDog = { ...canine, ...feline};
+const tripod = {...feline,legs : 3 };
+
+console.log(tripod);
+
+const mollusca = ['garden slug', ...cephalopods, ...gastropods];
+// console.log(mollusca);
 
 // console.log(giveMeFour(...str));
