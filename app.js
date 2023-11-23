@@ -414,9 +414,18 @@ const houseCat = {...feline, isGrumpy : true, personality : 'unpredictable'};
 const catDog = { ...canine, ...feline};
 const tripod = {...feline,legs : 3 };
 
-console.log(tripod);
+// console.log(tripod);
 
 const mollusca = ['garden slug', ...cephalopods, ...gastropods];
 // console.log(mollusca);
 
 // console.log(giveMeFour(...str));
+
+function summa() {
+    const argsArray = [...arguments];
+    return argsArray.reduce((total,currVal) => {
+        return total+currVal;
+    })
+}
+
+console.log(summa(1,2,3,4,5))
