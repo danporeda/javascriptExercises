@@ -447,4 +447,16 @@ const shitPie = ['clap', 'smack', 'blarp', 'clonk']
 
 const [primo, ...others] = shitPie;
 
-console.log(primo, others);
+// console.log(primo, others);
+
+const response = [
+    'HTTP/1.1',
+    '200 OK',
+    'application/json',
+]
+
+function parseResponse([, statusCode]) {
+    console.log(`Status ${statusCode}`);
+}
+
+console.log(parseResponse(response));
