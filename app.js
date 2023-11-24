@@ -217,8 +217,9 @@
 // })
 
 // const doubles2 = nums.map(n => {
-//     return n * 2;
+//    return n * 2;
 // })
+// console.log(doubles2);
 
 // const doubles3 = nums.map(n => n * 2);
 
@@ -387,7 +388,7 @@ const results = votes.reduce((tally, val) => {
 // const greeting = (person, greeting = 'hi') => greeting + ' ' + person + "!";
 // console.log(greeting('cunt', 'yo'));
 
-const nums = [9,3,2,8];
+// const nums = [9,3,2,8];
 // console.log(Math.max(...nums));
 
 function giveMeFour(a,b,c,d) {
@@ -428,4 +429,22 @@ function summa() {
     })
 }
 
-console.log(summa(1,2,3,4,5))
+function fullName(first,last, ...titles) {
+    console.log('first', first);
+    console.log('last', last);
+    console.log('titles', titles);
+}
+
+// console.log(fullName('Dan', 'Poreda', 'The Cunt', 'Wadsworth'));
+
+const multiply = (...nums) => (
+    nums.reduce((total, currVal) => total * currVal)
+)
+
+// console.log(multiply(3,6,9,2,7));
+
+const shitPie = ['clap', 'smack', 'blarp', 'clonk']
+
+const [primo, ...others] = shitPie;
+
+console.log(primo, others);
