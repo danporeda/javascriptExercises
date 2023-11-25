@@ -91,22 +91,27 @@
 
 // console.log(isPangram(sentence));
 
-// function pick(arr) {
-//     let idx = Math.floor(Math.random() * arr.length);
-//     return arr[idx];
-// }
+function pick(arr) {
+    let idx = Math.floor(Math.random() * arr.length);
+    return arr[idx];
+}
 
 // function getCard() {
 //     const numberArray = [2,3,4,5,6,7,8,9,10,'J','Q','K','A'];
-//     const suit = ['Hearts', 'Diamonds', 'Clubs', 'Spades'];
+//     const suits = ['Hearts', 'Diamonds', 'Clubs', 'Spades'];
 
-//     const card = {
-//         Suit : pick(suit),
-//         Num  : pick(numberArray)
-//     }
-//     return `${card.Num} of ${card.Suit}`;
+//     // const card = {
+//     //     Suit : pick(suit),
+//     //     Num  : pick(numberArray)
+//     // }
+//     const value = pick(numberArray);
+//     const suit = pick(suits);
+//     return {
+//         value,
+//         suit
+//     };
 // }
-
+// console.log(getCard());
 
 // for (let i = 0; i<=50; i++) {
 //     console.log(getCard());
@@ -356,33 +361,33 @@ const prices = [400.5, 30000, 99.99, 35.99, 12, 9500];
 //     return (accumulator + currentVal) / nums.length});
 // console.log(mean);
 
-const grades = [87,64,96,92,88,99,73,70,64];
+// const grades = [87,64,96,92,88,99,73,70,64];
 
-const maxGrade = grades.reduce((max,currVal) => {
-    if (currVal > max) return currVal;
-    return max;
-})
-const minGrade = grades.reduce((min, currVal) => {
-    return Math.min(min, currVal);
-})
-// console.log(minGrade);
+// const maxGrade = grades.reduce((max,currVal) => {
+//     if (currVal > max) return currVal;
+//     return max;
+// })
+// const minGrade = grades.reduce((min, currVal) => {
+//     return Math.min(min, currVal);
+// })
+// // console.log(minGrade);
 
-const sum = [10,20,30,40,50].reduce((sum, currVal) => {
-    return sum + currVal;
-}, 1000)
+// const sum = [10,20,30,40,50].reduce((sum, currVal) => {
+//     return sum + currVal;
+// }, 1000)
 // console.log(sum);
 
-const votes = ['y','n','y','y','y','n','y','n','n','y','n','n','y','y','n','n'];
-const results = votes.reduce((tally, val) => {
+// const votes = ['y','n','y','y','y','n','y','n','n','y','n','n','y','y','n','n'];
+// const results = votes.reduce((tally, val) => {
 //     if (tally[val]) {
 //         tally[val]++;
 //     } else {
 //         tally[val] = 1;
 //     }
 //     return tally;
-    tally[val] = (tally[val] || 0) +1;
-    return tally;
-}, {})
+//     tally[val] = (tally[val] || 0) +1;
+//     return tally;
+// }, {})
 // console.log(results);
 
 // const greeting = (person, greeting = 'hi') => greeting + ' ' + person + "!";
@@ -391,72 +396,166 @@ const results = votes.reduce((tally, val) => {
 // const nums = [9,3,2,8];
 // console.log(Math.max(...nums));
 
-function giveMeFour(a,b,c,d) {
-    console.log('a', a);
-    console.log('b', b);
-    console.log('c', c);
-    console.log('d', d);
-}
+// function giveMeFour(a,b,c,d) {
+//     console.log('a', a);
+//     console.log('b', b);
+//     console.log('c', c);
+//     console.log('d', d);
+// }
 
-const colors = ['red', 'blue', 'green', 'yellow', 'turqouise'];
+// const colors = ['red', 'blue', 'green', 'yellow', 'turqouise'];
 
-const str = 'GOAT';
+// const str = 'GOAT';
 
-const cephalopods = ['dumbo octopus', 'humboldt squid', 'flamboyant cuttlefish'];
+// const cephalopods = ['dumbo octopus', 'humboldt squid', 'flamboyant cuttlefish'];
 
-const gastropods = ['giant african snail','banana slug', 'variable neon slug'];
+// const gastropods = ['giant african snail','banana slug', 'variable neon slug'];
 
-const cnidaria = ['fire coral', 'moon jelly'];
+// const cnidaria = ['fire coral', 'moon jelly'];
 
-const feline = { legs : 4, family : "Felidae"};
-const canine = { family : 'Canine', furry : true};
-const dog = { ...canine, isPet : true, adorable : true};
-const houseCat = {...feline, isGrumpy : true, personality : 'unpredictable'};
-const catDog = { ...canine, ...feline};
-const tripod = {...feline,legs : 3 };
+// const feline = { legs : 4, family : "Felidae"};
+// const canine = { family : 'Canine', furry : true};
+// const dog = { ...canine, isPet : true, adorable : true};
+// const houseCat = {...feline, isGrumpy : true, personality : 'unpredictable'};
+// const catDog = { ...canine, ...feline};
+// const tripod = {...feline,legs : 3 };
 
 // console.log(tripod);
 
-const mollusca = ['garden slug', ...cephalopods, ...gastropods];
+// const mollusca = ['garden slug', ...cephalopods, ...gastropods];
 // console.log(mollusca);
 
 // console.log(giveMeFour(...str));
 
-function summa() {
-    const argsArray = [...arguments];
-    return argsArray.reduce((total,currVal) => {
-        return total+currVal;
-    })
-}
+// function summa() {
+//     const argsArray = [...arguments];
+//     return argsArray.reduce((total,currVal) => {
+//         return total+currVal;
+//     })
+// }
 
-function fullName(first,last, ...titles) {
-    console.log('first', first);
-    console.log('last', last);
-    console.log('titles', titles);
-}
+// function fullName(first,last, ...titles) {
+//     console.log('first', first);
+//     console.log('last', last);
+//     console.log('titles', titles);
+// }
 
 // console.log(fullName('Dan', 'Poreda', 'The Cunt', 'Wadsworth'));
 
-const multiply = (...nums) => (
-    nums.reduce((total, currVal) => total * currVal)
-)
+// const multiply = (...nums) => (
+//     nums.reduce((total, currVal) => total * currVal)
+// )
 
 // console.log(multiply(3,6,9,2,7));
 
-const shitPie = ['clap', 'smack', 'blarp', 'clonk']
+// const shitPie = ['clap', 'smack', 'blarp', 'clonk']
 
-const [primo, ...others] = shitPie;
+// const [primo, ...others] = shitPie;
 
 // console.log(primo, others);
 
-const response = [
-    'HTTP/1.1',
-    '200 OK',
-    'application/json',
-]
+// const response = [
+//     'HTTP/1.1',
+//     '200 OK',
+//     'application/json',
+// ]
 
-function parseResponse([, statusCode]) {
-    console.log(`Status ${statusCode}`);
+// function parseResponse([, statusCode]) {
+//     console.log(`Status ${statusCode}`);
+// }
+
+// console.log(parseResponse(response));
+
+// const getStats = (arr) => {
+//     const max = Math.max(...arr);
+//     const min = Math.min(...arr);
+//     const sum = arr.reduce((sum, r) => sum + r);
+//     const avg = sum / arr.length;
+//     return {
+//         max,
+//         min, 
+//         sum,
+//         avg
+//     }
+// }
+// const reviews = [4.5,5.0,3.44,2.8,3.5,4.0,3.5];
+
+// const stats = getStats(reviews);
+// console.log(stats);
+
+// const role = 'host';
+// const person = 'Jools Holland';
+// const role2 = 'Director';
+// const person2 = 'James Cameron'
+
+// const team = {};
+// team[role] = person;
+// team[role2] = person2;
+
+// const team = {
+//     [role]:person,
+//     [role2]:person2
+// }
+
+// function addProp(obj,k,v) {
+//     const copy = {...obj}
+//     copy[k] = v;
+//     return copy;
+// }
+
+// *computed properties
+// const addProp = (obj,k,v) => ({...obj,[k] : v });
+
+// console.log(addProp(team, 'happy', ':)'));
+
+// const math = {
+//     multiply : function(x, y) {
+//         return x * y;
+//     },
+//     divide : function(x, y) {
+//         return x / y;
+//     },
+//     square : function(x) {
+//         return x * x;
+//     }
+// }
+
+// const auth = {
+//     name: 'TommyBoy',
+//     login() {
+//         console.log("LOGGGED IN")
+//     },
+//     logout() {
+//         console.log("LOGGEDOUT")
+//     }
+// }
+
+// console.log(auth.login);
+
+// function sayHi() {
+//     console.log(this);
+// }
+
+// console.log(sayHi());
+
+const person = {
+    first : 'Cherilyn',
+    last : 'Sarkisian',
+    nickName : 'Cher',
+    // fullName() {
+    //     console.log(`${this.first} ${this.last} AKA ${this.nickName}`);
+    // }
+    fullName() {
+        const {
+            first,
+            last,
+            nickName
+        } = this;
+        return `${first} ${last} AKA ${nickName}`;
+    },
+    printBio(){
+        const fullName = this.fullName();
+        console.log(`${fullName} is a person!`);
+    }
 }
-
-console.log(parseResponse(response));
+console.log(person.printBio());
