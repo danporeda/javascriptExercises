@@ -538,24 +538,52 @@ const prices = [400.5, 30000, 99.99, 35.99, 12, 9500];
 
 // console.log(sayHi());
 
-const person = {
-    first : 'Cherilyn',
-    last : 'Sarkisian',
-    nickName : 'Cher',
+// const person = {
+//     first : 'Cherilyn',
+//     last : 'Sarkisian',
+//     nickName : 'Cher',
     // fullName() {
     //     console.log(`${this.first} ${this.last} AKA ${this.nickName}`);
     // }
-    fullName() {
-        const {
-            first,
-            last,
-            nickName
-        } = this;
-        return `${first} ${last} AKA ${nickName}`;
+//     fullName() {
+//         const {
+//             first,
+//             last,
+//             nickName
+//         } = this;
+//         return `${first} ${last} AKA ${nickName}`;
+//     },
+//     printBio(){
+//         const fullName = this.fullName();
+//         console.log(`${fullName} is a person!`);
+//     },
+//     laugh(){
+//         // console.log(this);
+//         console.log(`${this.nickName} says HAHAA`)
+//     }
+// }
+
+// // const printBio = person.printBio();
+
+// console.log(person.laugh());
+
+const annoyer = {
+    phrases : ['literally','cray cray', 'I cant even', 'totes!', 
+    'YOLO!','cant stop wont stop'],
+    pickPhrase() {
+        const { phrases } = this;
+        const idx = Math.floor(Math.random() * phrases.length);
+        return phrases[idx];
     },
-    printBio(){
-        const fullName = this.fullName();
-        console.log(`${fullName} is a person!`);
+    start() {
+        this.timerId = setInterval(() => {
+            console.log(this.pickPhrase());
+        }, 1000)
+    },
+    stop() {
+        clearInterval(this.timerId);
+        console.log('its over');
     }
-}
-console.log(person.printBio());
+    }
+
+
