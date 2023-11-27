@@ -567,23 +567,137 @@ const prices = [400.5, 30000, 99.99, 35.99, 12, 9500];
 
 // console.log(person.laugh());
 
-const annoyer = {
-    phrases : ['literally','cray cray', 'I cant even', 'totes!', 
-    'YOLO!','cant stop wont stop'],
-    pickPhrase() {
-        const { phrases } = this;
-        const idx = Math.floor(Math.random() * phrases.length);
-        return phrases[idx];
-    },
-    start() {
-        this.timerId = setInterval(() => {
-            console.log(this.pickPhrase());
-        }, 1000)
-    },
-    stop() {
-        clearInterval(this.timerId);
-        console.log('its over');
-    }
-    }
+// const annoyer = {
+//     phrases : ['literally','cray cray', 'I cant even', 'totes!', 
+//     'YOLO!','cant stop wont stop'],
+//     pickPhrase() {
+//         const { phrases } = this;
+//         const idx = Math.floor(Math.random() * phrases.length);
+//         return phrases[idx];
+//     },
+//     start() {
+//         this.timerId = setInterval(() => {
+//             console.log(this.pickPhrase());
+//         }, 1000)
+//     },
+//     stop() {
+//         clearInterval(this.timerId);
+//         console.log('its over');
+//     }
+//     }
 
 
+// function makeDeck(){
+//     const deck = [];
+//     const values = '2,3,4,5,6,7,8,9,10,J,Q,K,A';
+//     const suits = ['Hearts', 'Diamonds', 'Clubs', 'Spades'];
+//     for (let value of values.split(',')) {
+//         for (let suit of suits) {
+//             deck.push({
+//                 value,
+//                 suit
+//             })
+//         }
+//     }
+//     return deck;
+// }
+
+// function drawCard(deck) {
+//     return deck.pop();
+// }
+
+const myDeck = {
+    deck : [],
+    drawnCards : [],
+    suits : ['Hearts', 'Diamonds', 'Clubs', 'Spades'],
+    values : '2,3,4,5,6,7,8,9,10,J,Q,K,A',
+    initializeDeck(){
+        const {suits, values, deck} = this;
+        for (let value of values.split(',')) {
+            for (let suit of suits) {
+                deck.push({
+                    value,
+                    suit
+                })
+            }
+        }
+    return deck;
+    },
+    drawCard(){
+        const card = this.deck.pop();
+        this.drawnCards.push(card);
+        return card;
+    },
+    drawMultiple(numCards){
+        const cards =[];
+        for (let i = 0; i < numCards; i++){
+            cards.push(this.drawCard());
+        }
+        return cards;
+    },
+    shuffle() {
+        const { deck } = this;
+        for (let i = deck.length - 1; i > 0; i--){
+            // pick random index before current element
+            let j = Math.floor(Math.random() * (i + 1));
+            //swap
+            [deck[i], deck[j]] = [deck[j], deck[i]];
+        }
+    }
+}
+// myDeck.intializeDeck();
+// myDeck.shuffle();
+// console.log(myDeck.deck);
+
+// Deck factory
+const makeDeck = () => {
+    return {
+        deck : [],
+        drawnCards : [],
+        suits : ['Hearts', 'Diamonds', 'Clubs', 'Spades'],
+        values : '2,3,4,5,6,7,8,9,10,J,Q,K,A',
+        initializeDeck(){
+            const {suits, values, deck} = this;
+            for (let value of values.split(',')) {
+                for (let suit of suits) {
+                    deck.push({
+                        value,
+                        suit
+                    })
+                }
+            }
+        return deck;
+        },
+        drawCard(){
+            const card = this.deck.pop();
+            this.drawnCards.push(card);
+            return card;
+        },
+        drawMultiple(numCards){
+            const cards =[];
+            for (let i = 0; i < numCards; i++){
+                cards.push(this.drawCard());
+            }
+            return cards;
+        },
+        shuffle() {
+            const { deck } = this;
+            for (let i = deck.length - 1; i > 0; i--){
+                // pick random index before current element
+                let j = Math.floor(Math.random() * (i + 1));
+                //swap
+                [deck[i], deck[j]] = [deck[j], deck[i]];
+            }
+        }
+    }
+}
+
+const deck1 = makeDeck();
+deck1.initializeDeck()
+deck1.shuffle();
+const deck2 = makeDeck();
+deck2.initializeDeck();
+console.log(deck1.deck);
+console.log(deck2.deck);
+
+// q
