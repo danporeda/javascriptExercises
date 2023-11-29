@@ -91,10 +91,10 @@
 
 // console.log(isPangram(sentence));
 
-function pick(arr) {
-    let idx = Math.floor(Math.random() * arr.length);
-    return arr[idx];
-}
+// function pick(arr) {
+//     let idx = Math.floor(Math.random() * arr.length);
+//     return arr[idx];
+// }
 
 // function getCard() {
 //     const numberArray = [2,3,4,5,6,7,8,9,10,'J','Q','K','A'];
@@ -251,32 +251,32 @@ function pick(arr) {
 //     console.log(n * 3);
 // }
 
-const books = [{
-    title : 'Good Omens',
-    authors : ['Terry Pratchett', 'NEil Gaiman'],
-    rating : 4.25
-},
-{
-    title : 'Bone: The complete edition',
-    authors : ['Jeff Smith'],
-    rating : 4.2
-},
-{
-    title : 'American Goons',
-    authors : ['Neil Gaiman'],
-    rating : 4.11
-},
-{
-    title : 'A Gentleman in Moscow',
-    authors : ['Amor Towles'],
-    rating : 4.36
-},
-{
-    title : "Shitty Cunt of a Book",
-    authors: ['Hatem Bazien'],
-    rating: 0.01
-}
-]
+// const books = [{
+//     title : 'Good Omens',
+//     authors : ['Terry Pratchett', 'NEil Gaiman'],
+//     rating : 4.25
+// },
+// {
+//     title : 'Bone: The complete edition',
+//     authors : ['Jeff Smith'],
+//     rating : 4.2
+// },
+// {
+//     title : 'American Goons',
+//     authors : ['Neil Gaiman'],
+//     rating : 4.11
+// },
+// {
+//     title : 'A Gentleman in Moscow',
+//     authors : ['Amor Towles'],
+//     rating : 4.36
+// },
+// {
+//     title : "Shitty Cunt of a Book",
+//     authors: ['Hatem Bazien'],
+//     rating: 0.01
+// }
+// ]
 
 // const cuntLog = books.reduce((groupedBooks, book) => {
 //     const key = Math.floor(book.rating);
@@ -309,12 +309,12 @@ const books = [{
 // const square = n => n * n;
 // console.log(square(5));
 
-const movies = [
-    'Mrs. Doubtfire',
-    'Mr. and Mrs. Smith',
-    'The Fantastic Mr. Fox',
-    'Mr. Deeds'
-]
+// const movies = [
+//     'Mrs. Doubtfire',
+//     'Mr. and Mrs. Smith',
+//     'The Fantastic Mr. Fox',
+//     'Mr. Deeds'
+// ]
 
 // const movie = movies.find(movie => movie.includes('Mrs'));
 
@@ -325,20 +325,20 @@ const movies = [
 
 // console.log(mrMovie);
 
-const words = ['dog', 'lag', 'bag', 'fag', 'digf', 'log'];
+// const words = ['dog', 'lag', 'bag', 'fag', 'digf', 'log'];
 
-const all3Lets = words.every(word => word.length === 3);
+// const all3Lets = words.every(word => word.length === 3);
 
-const allEndInG = words.every(word => {
-    const lastL = word.length - 1;
-    return word[lastL] === 'g';
-});
+// const allEndInG = words.every(word => {
+//     const lastL = word.length - 1;
+//     return word[lastL] === 'g';
+// });
 
-const startsD = words.some(word => word[0] === 'd');
+// const startsD = words.some(word => word[0] === 'd');
 
-// console.log(startsD);
+// // console.log(startsD);
 
-const prices = [400.5, 30000, 99.99, 35.99, 12, 9500];
+// const prices = [400.5, 30000, 99.99, 35.99, 12, 9500];
 
 // const sortedPrices = prices.sort();
 // console.log('prices',prices);
@@ -606,98 +606,111 @@ const prices = [400.5, 30000, 99.99, 35.99, 12, 9500];
 //     return deck.pop();
 // }
 
-const myDeck = {
-    deck : [],
-    drawnCards : [],
-    suits : ['Hearts', 'Diamonds', 'Clubs', 'Spades'],
-    values : '2,3,4,5,6,7,8,9,10,J,Q,K,A',
-    initializeDeck(){
-        const {suits, values, deck} = this;
-        for (let value of values.split(',')) {
-            for (let suit of suits) {
-                deck.push({
-                    value,
-                    suit
-                })
-            }
-        }
-    return deck;
-    },
-    drawCard(){
-        const card = this.deck.pop();
-        this.drawnCards.push(card);
-        return card;
-    },
-    drawMultiple(numCards){
-        const cards =[];
-        for (let i = 0; i < numCards; i++){
-            cards.push(this.drawCard());
-        }
-        return cards;
-    },
-    shuffle() {
-        const { deck } = this;
-        for (let i = deck.length - 1; i > 0; i--){
-            // pick random index before current element
-            let j = Math.floor(Math.random() * (i + 1));
-            //swap
-            [deck[i], deck[j]] = [deck[j], deck[i]];
-        }
-    }
-}
+// const myDeck = {
+//     deck : [],
+//     drawnCards : [],
+//     suits : ['Hearts', 'Diamonds', 'Clubs', 'Spades'],
+//     values : '2,3,4,5,6,7,8,9,10,J,Q,K,A',
+//     initializeDeck(){
+//         const {suits, values, deck} = this;
+//         for (let value of values.split(',')) {
+//             for (let suit of suits) {
+//                 deck.push({
+//                     value,
+//                     suit
+//                 })
+//             }
+//         }
+//     return deck;
+//     },
+//     drawCard(){
+//         const card = this.deck.pop();
+//         this.drawnCards.push(card);
+//         return card;
+//     },
+//     drawMultiple(numCards){
+//         const cards =[];
+//         for (let i = 0; i < numCards; i++){
+//             cards.push(this.drawCard());
+//         }
+//         return cards;
+//     },
+//     shuffle() {
+//         const { deck } = this;
+//         for (let i = deck.length - 1; i > 0; i--){
+//             // pick random index before current element
+//             let j = Math.floor(Math.random() * (i + 1));
+//             //swap
+//             [deck[i], deck[j]] = [deck[j], deck[i]];
+//         }
+//     }
+// }
 // myDeck.intializeDeck();
 // myDeck.shuffle();
 // console.log(myDeck.deck);
 
 // Deck factory
-const makeDeck = () => {
-    return {
-        deck : [],
-        drawnCards : [],
-        suits : ['Hearts', 'Diamonds', 'Clubs', 'Spades'],
-        values : '2,3,4,5,6,7,8,9,10,J,Q,K,A',
-        initializeDeck(){
-            const {suits, values, deck} = this;
-            for (let value of values.split(',')) {
-                for (let suit of suits) {
-                    deck.push({
-                        value,
-                        suit
-                    })
-                }
-            }
-        return deck;
-        },
-        drawCard(){
-            const card = this.deck.pop();
-            this.drawnCards.push(card);
-            return card;
-        },
-        drawMultiple(numCards){
-            const cards =[];
-            for (let i = 0; i < numCards; i++){
-                cards.push(this.drawCard());
-            }
-            return cards;
-        },
-        shuffle() {
-            const { deck } = this;
-            for (let i = deck.length - 1; i > 0; i--){
-                // pick random index before current element
-                let j = Math.floor(Math.random() * (i + 1));
-                //swap
-                [deck[i], deck[j]] = [deck[j], deck[i]];
-            }
-        }
-    }
-}
+// const makeDeck = () => {
+//     return {
+//         deck : [],
+//         drawnCards : [],
+//         suits : ['Hearts', 'Diamonds', 'Clubs', 'Spades'],
+//         values : '2,3,4,5,6,7,8,9,10,J,Q,K,A',
+//         initializeDeck(){
+//             const {suits, values, deck} = this;
+//             for (let value of values.split(',')) {
+//                 for (let suit of suits) {
+//                     deck.push({
+//                         value,
+//                         suit
+//                     })
+//                 }
+//             }
+//         return deck;
+//         },
+//         drawCard(){
+//             const card = this.deck.pop();
+//             this.drawnCards.push(card);
+//             return card;
+//         },
+//         drawMultiple(numCards){
+//             const cards =[];
+//             for (let i = 0; i < numCards; i++){
+//                 cards.push(this.drawCard());
+//             }
+//             return cards;
+//         },
+//         shuffle() {
+//             const { deck } = this;
+//             for (let i = deck.length - 1; i > 0; i--){
+//                 // pick random index before current element
+//                 let j = Math.floor(Math.random() * (i + 1));
+//                 //swap
+//                 [deck[i], deck[j]] = [deck[j], deck[i]];
+//             }
+//         }
+//     }
+// }
 
-const deck1 = makeDeck();
-deck1.initializeDeck()
-deck1.shuffle();
-const deck2 = makeDeck();
-deck2.initializeDeck();
-console.log(deck1.deck);
-console.log(deck2.deck);
+// const deck1 = makeDeck();
+// deck1.initializeDeck()
+// deck1.shuffle();
+// const deck2 = makeDeck();
+// deck2.initializeDeck();
+// console.log(deck1.deck);
+// console.log(deck2.deck);
 
-// q
+
+// const allLis = document.querySelectorAll('li');
+
+// const colors = ['red', 'orange', 'green', 'blue', 'purple', 'yellow'];
+
+// for (i = 0; i < allLis.length; i++) {
+// for (let li of allLis) {
+//     li.style.color = ;
+// }
+
+// allLis.forEach((el, i) => {
+//     const color = colors[i];
+//     el.style.color = color;
+// })
